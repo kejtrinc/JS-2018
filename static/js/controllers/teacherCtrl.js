@@ -103,8 +103,10 @@ angular.module('myApp.controllers').controller('teacherCtrl',
                 });
             };
 
+//ta funkcja zapisuje podany 'test' w systemie backendowym pod adresem'URL'
 
-            $scope.saveTest = function(test) {
+            $scope.saveTest = function() {
+                let testDoZapisania = $scope.test;
                 $http({
                     url: $rootScope.DATA + '/groups',
                     method: 'POST',
